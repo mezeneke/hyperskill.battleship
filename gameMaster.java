@@ -63,8 +63,11 @@ class gameMaster {
     }
 
     /**
-     * Subroutine: Taking inputs (coordinates) of the player, verifies them and deploys the ships in the player's Fleet.
-     * @param player object
+     * Subroutine: Deploys the ships in the player's Fleet:
+     * Taking coordinates of the player ->
+     * Validate coordinates ->
+     * Place ship.
+     * @param player players object
      */
     void initiateFleetDeployment(Player player) {
         boolean isPDeployed;
