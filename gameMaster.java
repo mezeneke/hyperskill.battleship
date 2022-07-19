@@ -63,7 +63,7 @@ class gameMaster {
     }
 
     /**
-     * Subroutine: Taking input (coordinates) of the player, verifies them and deploys the ships in the player's Fleet.
+     * Subroutine: Taking inputs (coordinates) of the player, verifies them and deploys the ships in the player's Fleet.
      * @param player object
      */
     void initiateFleetDeployment(Player player) {
@@ -106,6 +106,13 @@ class gameMaster {
         }
     }
 
+    /**
+     * Launches a skirmish sequence.
+     * The attacking player's coordinates are taken as input.
+     * The attacking player attacks the defending player at the coordinate.
+     * @param attacker
+     * @param defender
+     */
     void launchSkirmish(Player attacker, Player defender) {
         String str;
         Coordinate c;
@@ -122,6 +129,13 @@ class gameMaster {
         attacker.attack(defender, c);
     }
 
+    /**
+     * Launches a skirmish sequence.
+     * The attacking player attacks the defending player at the coordinate.
+     * @param attacker
+     * @param defender
+     * @param c coordinate
+     */
     void launchSkirmish(Player attacker, Player defender, Coordinate c) {
 
         defender.fleet.print(true);
